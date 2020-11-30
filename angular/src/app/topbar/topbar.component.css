@@ -1,0 +1,4 @@
+#alert{
+    max-height: 46vh;
+    overflow-y: auto;
+}

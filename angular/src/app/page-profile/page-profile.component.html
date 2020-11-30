@@ -1,0 +1,104 @@
+<div id="wrapper">
+
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content" class="min-vh-100">
+
+            <!-- Topbar -->
+            <app-topbar></app-topbar>
+
+
+            <div class="container-fluid">
+
+                <div class="row mb-5 grow-1">
+
+
+                    <div id="me" class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                        <div class="rounded-0 shadow card">
+                            <div class="rounded-0 card-header p-0 bg-white border-0">
+                                <div class="bg-purple position-relative pt-4 profile-img d-flex justify-content-center">
+                                    <img src="/assets/images/{{profilePicture}}.jpg" class="border border-thick rounded-circle profile-img-lg">
+                                </div>
+                            </div>
+                            <div class="card-body bg-purple text-center">
+                                <h3 class="text-white">{{ usersName }}</h3>
+                                <p class="w-50 h6 mx-auto text-white">I'm just a normal person, I like cats & {{usersEmail}}. I also went skydiving once.</p>
+
+                                <div class="my-4">
+
+                                    <div *ngIf="haveRecievedFriendRequest" class="my-4">
+                                        <hr class="w-25 my-4 bg-white">
+                                        <h6 class="text-white font-weight-normal">This user has sent you a friend request.</h6>
+                                        <button (click)="accept();" class="btn btn-sm btn-success rounded-pill m-1 px-4">Accept</button>
+                                        <button (click)="decline();" class="btn btn-sm btn-danger rounded-pill m-1 px-4">Decline</button>
+                                        <hr class="w-25 my-4 bg-white">
+                                    </div>
+
+                                    <button *ngIf="haveSentFriendRequest" class="btn btn-warning rounded-pill m-1">Friend Request Pending</button>
+
+                                    <button *ngIf="canAddUser && !haveSentFriendRequest && !haveRecievedFriendRequest" class="btn btn-light text-primary rounded-pill m-1" (click)="makeFriendRequest();" >Add Friend</button>
+                                    <button *ngIf="canSendMessage" class="btn btn-info rounded-pill m-1">Send Message</button>
+                                </div>
+
+
+                                <hr class="w-25 my-4 bg-white">
+                                <div class="h4 text-white">
+                                    Friends: <span>{{totalFriends}}</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div *ngIf="randomFriends" id="friends-list" class="card shadow rounded-0 mt-4 pb-3">
+                            <div class="row m-0">
+                                <div *ngFor="let friend of randomFriends" class="col-xl-4 col-6 mt-5">
+                                    <div class="friend">
+                                        <img routerLink="/profile/{{friend._id}}" src="/assets/images/{{friend.profile_image}}.jpg">
+                                        <h5 class="text-center pb-1">
+                                            <a routerLink="/profile/{{friend._id}}" class="link text-purple font-weight-400">{{friend.name}}</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="recent-posts" class="col-lg-5 col-md-6 mt-5 mt-md-0">
+                        <h3 class="text-success shadow py-3 text-center bg-white rounded-pill">Recent Posts</h3>
+
+                        <app-post *ngFor="let post of posts.slice(0, showPosts)" [post]="post"></app-post>
+
+                        <a (click)="showMorePosts();" *ngIf="posts.length && showPosts < posts.length && showPosts" class="bg-success d-block mt-4 py-3 text-center rounded-pill text-white link h5">Load More</a>
+
+                        <h3 *ngIf="!showPosts" class="text-center w-75 mx-auto mt-5 text-purple">Add this user to as a friend to see their latest posts.</h3>
+
+                        <div *ngIf="posts.length && showPosts >= posts.length">
+                            <h2 class="mt-5 text-primary text-center">No more posts, you've stalked this user completely.</h2>
+                            <a (click)="backToTop();" class="link h4 text-center d-block w-max mx-auto my-3">Back To Top</a>
+                        </div>
+                    </div>
+
+                    <div id="big-links" class="col-lg-3 col--12 mt-5 mt-lg-0">
+                        <div class="shadow card border-0 rounded-0 big-link bg-success text-white">
+                            <a routerLink="/feed" class="text-white link font-weight-500 text-center display-3">
+                                Feed
+                                <br>
+                                <i class="fas fa-list fa-sm fa-fw mr-2"></i>
+                            </a>
+                        </div>
+                        <div class="mt-3 shadow card border-0 rounded-0 big-link bg-primary text-white">
+                            <a routerLink="/messages" class="text-white link font-weight-500 text-center display-3">
+                                Messages
+                                <br>
+                                <i class="fas fa-envelope fa-fw"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
