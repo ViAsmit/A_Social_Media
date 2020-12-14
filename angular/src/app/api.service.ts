@@ -100,4 +100,27 @@ export class ApiService {
             });
         });
     }
+
+    public sendMessage(sendMessageObject){
+        if(!sendMessageObject.content){
+            this.events.onAlertEvent.emit("Message noe sent. (Empty Content)");
+            return;
+        }
+
+        let requestObject = {
+            location: `users/send-message/${sendMessageObject.id}`,
+            method: "POST",
+            body: { content: sendMessageObject.content }
+        }
+
+        return new Promise((resolve, reject) => {
+            this.makeRequest(requestObject).then((val) => {
+                console.log(val);
+                if(val.statusCode == 201){
+                    this.events.onAlertEvent.emit("Successfully sent a friend request");
+                }
+                resolve(val);
+            });
+        });
+    }
 }

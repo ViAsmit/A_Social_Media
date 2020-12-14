@@ -35,6 +35,7 @@ export class TopbarComponent implements OnInit {
             console.log("ALERT");
             this.alertMessage = msg;
         });
+        
         let friendRequestEvent = this.events.updateNumOfFriendRequestsEvent.subscribe((msg) => {
             this.numOfFriendsRequests--;
         });
@@ -48,6 +49,11 @@ export class TopbarComponent implements OnInit {
 
         });
 
+        let updateMessageEvent = this.events.updateSendMessageObjectEvent.subscribe((d) => {
+            this.sendMessageObject.id = d.id;
+            this.sendMessageObject.name = d.name;
+        });
+        
         let requestObject = {
             location: `users/get-user-data/${this.usersId}`,
             method: "GET"
@@ -57,7 +63,7 @@ export class TopbarComponent implements OnInit {
             this.centralUserData.getUserData.emit(val.user);
         })
 
-        this.subscription.push(alertEvent, friendRequestEvent, userDataEvent);
+        this.subscription.push(alertEvent, friendRequestEvent, userDataEvent, updateMessageEvent);
     }
 
     public query: String = "";
@@ -70,10 +76,25 @@ export class TopbarComponent implements OnInit {
     public new_message_notifications: Number = 0;
     public numOfFriendsRequests: number = 0;
 
+    public sendMessageObject = {
+        id: "",
+        name: "",
+        content: ""
+    };
+
     private subscription = [];
 
     public searchForFriends(){
         this.router.navigate(['/search-results', {query: this.query}]);
     };
+
+    public sendMessage(){
+        this.api.sendMessage(this.sendMessageObject);
+        console.log("Send Message to: ", this.sendMessageObject.name, this.sendMessageObject.id, this.sendMessageObject.content);
+        this.sendMessageObject.content = "";
+        
+    }
+
+    
 
 }

@@ -27,7 +27,7 @@
 
         <button *ngIf="use == 'request' || haveRecievedFriendRequest" class="btn btn-sm btn-primary rounded-pill ml-1" data-toggle="modal" data-target="#staticBackdrop" (click)="accept(); haveRecievedFriendRequest=false; isFriend=true;">Accept</button>
 
-        <button class="btn btn-sm btn-success rounded-pill ml-1" data-toggle="modal" data-target="#staticBackdrop">Send Message</button>
+        <button class="btn btn-sm btn-success rounded-pill ml-1" data-toggle="modal" data-target="#staticBackdrop" (click)="updateSendMessageObject(this.resultRequest._id, this.resultRequest.name)">Send Message</button>
 
         <button *ngIf="use == 'request' || haveRecievedFriendRequest" class="btn btn-sm btn-danger rounded-pill ml-1" data-toggle="modal" data-target="#staticBackdrop" (click)="decline(); haveRecievedFriendRequest=false;">Decline</button>
     </div>
