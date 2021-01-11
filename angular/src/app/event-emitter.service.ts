@@ -8,6 +8,7 @@ export class EventEmitterService {
     onAlertEvent: EventEmitter<String> = new EventEmitter();
     updateNumOfFriendRequestsEvent: EventEmitter<String> = new EventEmitter();
     updateSendMessageObjectEvent: EventEmitter<object> = new EventEmitter();
+    resetMessageNotificationsEvent: EventEmitter<string> = new EventEmitter();
 
 
     constructor() { }

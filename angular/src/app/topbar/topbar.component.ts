@@ -37,21 +37,28 @@ export class TopbarComponent implements OnInit {
         });
         
         let friendRequestEvent = this.events.updateNumOfFriendRequestsEvent.subscribe((msg) => {
-            this.numOfFriendsRequests--;
+            this.notifications.friendRequests--;
         });
 
-        let userDataEvent = this.centralUserData.getUserData.subscribe((data) => {
-            this.userData = data;
-            this.new_notifications = data.new_notifications;
-            this.new_message_notifications = data.new_message_notifications
-            this.numOfFriendsRequests = data.friend_requests.length;
-            this.profilePicture = data.profile_image;
+        let userDataEvent = this.centralUserData.getUserData.subscribe((user) => {
+
+            console.log(user.messages);
+            
+
+            this.notifications.friendRequests = user.friend_requests.length;
+            this.notifications.messages = user.new_message_notifications.length;
+            this.notifications.alert = user.new_notifications;
+            this.profilePicture = user.profile_image;
 
         });
 
         let updateMessageEvent = this.events.updateSendMessageObjectEvent.subscribe((d) => {
             this.sendMessageObject.id = d.id;
             this.sendMessageObject.name = d.name;
+        });
+
+        let resetMessagesEvent = this.events.resetMessageNotificationsEvent.subscribe(() => {
+            this.notifications.messages = 0;
         });
         
         let requestObject = {
@@ -63,26 +70,31 @@ export class TopbarComponent implements OnInit {
             this.centralUserData.getUserData.emit(val.user);
         })
 
-        this.subscription.push(alertEvent, friendRequestEvent, userDataEvent, updateMessageEvent);
+        this.subscription.push(alertEvent, friendRequestEvent, userDataEvent, updateMessageEvent, resetMessagesEvent);
     }
 
     public query: String = "";
-    public usersName: String = "";
-    public usersId: String = "";
-    public userData: Object = {};
-    public alertMessage: String = "";
-    public profilePicture: String = "default-avatar";
-    public new_notifications: Number = 0;
-    public new_message_notifications: Number = 0;
-    public numOfFriendsRequests: number = 0;
-
+    private subscription = [];
     public sendMessageObject = {
         id: "",
         name: "",
         content: ""
     };
+    public alertMessage: String = "";
 
-    private subscription = [];
+    //UserData
+    public usersName: String = "";
+    public usersId: String = "";
+    public profilePicture: String = "default-avatar";
+
+    public messagePreviews = [];
+    public notifications = {
+        alert: 0,
+        friendRequests: 0,
+        messages: 0,
+    }
+
+
 
     public searchForFriends(){
         this.router.navigate(['/search-results', {query: this.query}]);
@@ -95,6 +107,9 @@ export class TopbarComponent implements OnInit {
         
     }
 
+    public resetMessageNotifications(){
+        this.api.resetMessageNotifications();
+    }
     
 
 }

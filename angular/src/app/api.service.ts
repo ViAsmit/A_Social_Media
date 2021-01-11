@@ -123,4 +123,20 @@ export class ApiService {
             });
         });
     }
+
+    public resetMessageNotifications(){
+        
+        let requestObject = {
+            location: "users/reset-message-notifications",
+            method: "POST"
+        }
+        return new Promise((resolve, reject) => {
+            this.makeRequest(requestObject).then((val) => {
+                if(val.statusCode == 201){
+                    this.events.resetMessageNotificationsEvent.emit();
+                }
+                resolve(val);
+            });
+        });
+    }
 }

@@ -44,7 +44,7 @@
         <li class="nav-item dropdown no-arrow mx-1">
             <a class="nav-link dropdown-toggle" href="" routerLink="/friend-requests">
                 <i class="fas fa-users"></i>
-                <span *ngIf="numOfFriendsRequests" class="badge badge-danger badge-counter">{{ numOfFriendsRequests }}</span>
+                <span *ngIf="notifications.friendRequests" class="badge badge-danger badge-counter">{{ notifications.friendRequests }}</span>
             </a>
         </li>
 
@@ -53,7 +53,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
                 <!-- Counter - Alerts -->
-                <span *ngIf="new_notifications" class="badge badge-danger badge-counter">{{ new_notifications }}</span>
+                <span *ngIf="notifications.alert" class="badge badge-danger badge-counter">{{ notifications.alerts }}</span>
             </a>
             <!-- Dropdown - Alerts -->
             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
@@ -99,10 +99,10 @@
 
         <!-- Nav Item - Messages -->
         <li class="nav-item dropdown no-arrow mx-1">
-            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a (click)="resetMessageNotifications()" class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-envelope fa-fw"></i>
                 <!-- Counter - Messages -->
-                <span *ngIf="new_message_notifications" class="badge badge-danger badge-counter"> {{ new_message_notifications }} </span>
+                <span *ngIf="notifications.messages" class="badge badge-danger badge-counter"> {{ notifications.messages }} </span>
             </a>
             <!-- Dropdown - Messages -->
             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
@@ -199,7 +199,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Nevermind</button>
-                <button type="submit" class="btn btn-primary" form="send-message" (click)="sendMessage()">Send Message</button>
+                <button type="submit" class="btn btn-primary" form="send-message" data-dismiss="modal" (click)="sendMessage()">Send Message</button>
             </div>
         </div>
     </div>
