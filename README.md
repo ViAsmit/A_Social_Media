@@ -1,4 +1,3 @@
-[![Visits Badge](https://badges.pufler.dev/visits/ViAsmit/A_Social_Media)](https://badges.pufler.dev) [![Created Badge](https://badges.pufler.dev/created/ViAsmit/A_Social_Media)](https://badges.pufler.dev) [![Updated Badge](https://badges.pufler.dev/updated/ViAsmit/A_Social_Media)](https://badges.pufler.dev)
 
 # [A Social Media](https://xunbao.elementsculmyca.com/)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
@@ -22,7 +21,7 @@
 * [Contributing](#contributing)
 * [License](#license)
 
-## About the Project
+## About the Project 🚀
 [A_Social_Media](http://whispering-hollows-06439.herokuapp.com/) is a fully-functional Social Media Plarform, integrated with :
 
 1. MongoDB - for storing data in Back-End.
@@ -38,14 +37,14 @@
 [Back to Table of Contents](#table-of-contents)
 
 ## Getting Started
-### Prerequisites
+### Prerequisites 🔥
 * Node.js
 * Angular
 * MongoDB
 * Express
 
 
-### Installation
+### Installation 🔥
 
 
 
@@ -96,7 +95,7 @@
 
 ## Frontend
 
-* #### Angular
+* #### Angular <img src="" width="50" height="50" />  
     Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.
     It uses modern web platform capabilities to deliver app-like experiences. High performance, offline, and zero-step installation.
     
