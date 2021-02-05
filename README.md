@@ -161,20 +161,12 @@
 [Back to Table of Contents](#table-of-contents)
 ## Screenshots
 
-![alt text](Screenshots/Home.JPG)
+![alt text](Screenshots/login.png)
 
-![alt text](Screenshots/CustomerProfile.JPG)
+![alt text](Screenshots/reg.png)
 
-![alt text](Screenshots/IncompleteBooking.JPG)
+![alt text](Screenshots/feed2.png)
 
-![alt text](Screenshots/UpcomingRides.JPG)
+![alt text](Screenshots/profile.png)
 
-![alt text](Screenshots/VendorRegistration.JPG)
-
-![alt text](Screenshots/VendorBookings.JPG)
-
-![alt text](Screenshots/AdminMainPage.JPG)
-
-![alt text](Screenshots/AdminRideCalculation.JPG)
-
-![alt text](Screenshots/AdminVendors.JPG)
+![alt text](Screenshots/friend.png)
