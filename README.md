@@ -58,12 +58,6 @@
     $ sudo apt install npm
     $ npm install -g express
     ```
-    
-  * Angular
-    
-    ```
-    $ npm install -g @angular/cli
-    ```
   
   
   * MongoDB
@@ -71,6 +65,14 @@
     ```
     $ npm install mongod
     $ sudo systemctl start mongod
+    ```
+    
+* Frontend
+
+  * Angular
+    
+    ```
+    $ npm install -g @angular/cli
     ```
   
 
@@ -127,39 +129,32 @@
 
 ## Features
 
-* #### Customer Module
-    *  Registration and login for Customer
-    *  Customer can Modify his/her profile
-    *  Customer can select One Way/Round Trip and Multi City Trip
-    *  Customer can have a access of own activity dashboard
-    *  Customer can view own trip history
-    *  Customer will receive notification for each activity related to him/her.
-    *  Customer can pay fare online or offline mode as per the policy
-    *  Customers can schedule immediate/later ride as per their convenience
-    *  Customer can view the rating of any Driver/Cab
-    *  Customer can give the rating for Cab and Driver related to him/her
+* #### Login and Registration
+    *  Registration and login for User
+    *  User can view his/her profile
 
-* #### Vendor/Driver Module
-    *  Registration and login for Vendor/Driver
-    *  Vendor/Driver can Modify his/her profile
-    *  Vendor/Driver can have a access of own activity dashboard
-    *  Vendor/Driver can view own schedule ( upcoming rides).
-    *  Vendor/Driver will receive notification for each activity related to him/her.
-    *  Vendor/Driver can view their ride history (Past Completed Ride).
-    *  Vendor/Driver can select the area as per their convenience.(From where they want expect ride)
-    *  Vendor/Driver can view the rating of Customer
-    *  Vendor/Driver can give the rating for Customer after completing the ride.
+* #### Feed Section
+    *  User can view feed section, only after registration, or login
+    *  User can create new posts.
+    *  User can like and comment on posts.
+    *  User can view his/her friends post in feed section. 
 
-* #### Admin Module
+* #### Profile
   
-    *  Enable and Disable Customer/Driver
-    *  Admin can have a access for complete dashboard activities
-    *  Admin can add/modify the Customer/Driver Details
-    *  Admin will receive notification for each activity
-    *  Admin can generate weekly/monthly report from activity dashboard
-    *  Admin can view total revenue w.r.t. Customer or Driver
-    *  Admin can modify fare structure
-    *  Admin can modify pickup locations
+    *  User can view his/her profile
+    *  User can view his/her friends.
+    *  User can see new friend's suggestions.
+    *  User can send or recieve friend request.
+    *  User can message any user, from his/her profile.
+
+* #### Messages
+
+    * User can start a coversation with a friend.
+    * User can delete messages
+    
+* #### Extra Features
+     
+     * User can see General Alerts, Notification, and Message Alerts, from the home page.
 
 
 
