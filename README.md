@@ -161,12 +161,7 @@
 [Back to Table of Contents](#table-of-contents)
 ## Screenshots
 
-![alt text](Screenshots/login.png)
+<img src="Screenshots/login.png" width="470" height="300" />      <img src="Screenshots/reg.png" width="470" height="300" />
+<img src="Screenshots/feed.png" width="470" height="300" />       <img src="Screenshots/profile.png" width="470" height="300" />
+<img src="Screenshots/friend.png" width="470" height="300" />     <img src="Screenshots/feed2.png" width="470" height="300" />
 
-![alt text](Screenshots/reg.png)
-
-![alt text](Screenshots/feed2.png)
-
-![alt text](Screenshots/profile.png)
-
-![alt text](Screenshots/friend.png)
