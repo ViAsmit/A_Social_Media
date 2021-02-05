@@ -95,7 +95,7 @@
 
 ## Frontend
 
-* #### Angular <img src="" width="50" height="50" />  
+* #### Angular
     Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.
     It uses modern web platform capabilities to deliver app-like experiences. High performance, offline, and zero-step installation.
     
