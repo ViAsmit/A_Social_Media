@@ -1,6 +1,5 @@
-[![Visits Badge](https://badges.pufler.dev/visits/ViAsmit/A_Social_Media)](https://badges.pufler.dev) [![Created Badge](https://badges.pufler.dev/created/ViAsmit/A_Social_Media)](https://badges.pufler.dev) [![Updated Badge](https://badges.pufler.dev/updated/ViAsmit/A_Social_Media)](https://badges.pufler.dev)
 
-# [A Social Media](https://xunbao.elementsculmyca.com/)
+# [A Social Media](http://whispering-hollows-06439.herokuapp.com/)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
 
 
@@ -22,7 +21,7 @@
 * [Contributing](#contributing)
 * [License](#license)
 
-## About the Project
+## About the Project 🚀
 [A_Social_Media](http://whispering-hollows-06439.herokuapp.com/) is a fully-functional Social Media Plarform, integrated with :
 
 1. MongoDB - for storing data in Back-End.
@@ -38,14 +37,14 @@
 [Back to Table of Contents](#table-of-contents)
 
 ## Getting Started
-### Prerequisites
+### Prerequisites 🔥
 * Node.js
 * Angular
 * MongoDB
 * Express
 
 
-### Installation
+### Installation 🔥
 
 
 
@@ -161,20 +160,7 @@
 [Back to Table of Contents](#table-of-contents)
 ## Screenshots
 
-![alt text](Screenshots/Home.JPG)
+<img src="Screenshots/login.png" width="470" height="300" />      <img src="Screenshots/reg.png" width="470" height="300" />
+<img src="Screenshots/feed.png" width="470" height="300" />       <img src="Screenshots/profile.png" width="470" height="300" />
+<img src="Screenshots/friend.png" width="470" height="300" />     <img src="Screenshots/feed2.png" width="470" height="300" />
 
-![alt text](Screenshots/CustomerProfile.JPG)
-
-![alt text](Screenshots/IncompleteBooking.JPG)
-
-![alt text](Screenshots/UpcomingRides.JPG)
-
-![alt text](Screenshots/VendorRegistration.JPG)
-
-![alt text](Screenshots/VendorBookings.JPG)
-
-![alt text](Screenshots/AdminMainPage.JPG)
-
-![alt text](Screenshots/AdminRideCalculation.JPG)
-
-![alt text](Screenshots/AdminVendors.JPG)
